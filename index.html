@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Jogos FromSoftware</title>
+</head>
+<body>
+<div id="app"> 
+    <div class="borda2">
+    <div class="caixa">
+    <div v-for="jogo in jogos" :key="jogo.name"
+    @click="jogo.activite = !jogo.activite"
+    :class="jogo.activite ? 'active' : ''"
+    >
+       
+        <div class="borda">
+        <img :src="jogo.photo">
+        <p>{{ jogo.name }}</p> 
+        <span class="price">Preço: US$ {{ jogo.price.toLocaleString('en', { minimumFractionDigits: 2 }) }}</span>
+        <span class="quantity">{{jogo.quantity}}</span>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="script.js"></script>
+    
+</body>
+</html>

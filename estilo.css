@@ -1,0 +1,55 @@
+
+
+p {
+    font-size: 25px;
+}
+
+span {
+    font-size: 18px;
+}
+
+.borda {
+    border: 1px solid black;
+    padding: 16px;
+    display: flex; /* Torna a caixa flexível */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    width: 150px; /* Define um tamanho fixo */
+    height: 250px; /* Define uma altura fixa */
+    text-align: center; /* Centraliza o texto */
+    margin: 0 auto; /* Centraliza a borda no grid */
+    margin-bottom: 10%;
+    min-width: 70%;
+}
+
+.borda img {
+    width: 100px; /* Define uma largura fixa */
+    height: 200px; /* Define uma altura fixa */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+    margin-bottom: 10px; /* Espaçamento entre a imagem e os outros itens */
+}
+
+.caixa{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 0px; /* Remove completamente o espaçamento entre as caixas */
+    justify-content: center; /* Centraliza o grid */
+    align-items: center; /* Alinha os itens verticalmente */
+    max-width: 650px; /* Limita a largura total do grid para aproximar os itens */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    margin-left: -0px;
+    margin-top: 3%;
+}
+
+.borda2 {
+    border: 1px solid;
+    max-width: 670px;
+    margin-top: 2%;
+}
+
+.active {
+    border: 2px solid blue;
+}
+
+
