@@ -21,25 +21,46 @@ span {
     margin: 0 auto; /* Centraliza a borda no grid */
     margin-bottom: 10%;
     min-width: 70%;
+    min-height: 90%;
 }
 
-.borda img {
-    width: 100px; /* Define uma largura fixa */
-    height: 200px; /* Define uma altura fixa */
-    object-fit: cover; /* Ajusta a imagem para preencher o espaço */
-    margin-bottom: 10px; /* Espaçamento entre a imagem e os outros itens */
+
+
+.borda3 {
+    border: 3px solid blue;
+    padding: 16px;
+    display: flex; /* Torna a caixa flexível */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    width: 150px; /* Define um tamanho fixo */
+    height: 250px; /* Define uma altura fixa */
+    text-align: center; /* Centraliza o texto */
+    margin: 0 auto; /* Centraliza a borda no grid */
+    margin-bottom: 10%;
+    min-width: 70%;
+    min-height: 90%;
 }
+
+img {
+    width: 150px; /* Define uma largura fixa */
+    height: 170px; /* Define uma altura fixa */
+}
+
+
 
 .caixa{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas */
     gap: 0px; /* Remove completamente o espaçamento entre as caixas */
+    row-gap: 3%;
     justify-content: center; /* Centraliza o grid */
     align-items: center; /* Alinha os itens verticalmente */
     max-width: 650px; /* Limita a largura total do grid para aproximar os itens */
     margin: 0 auto; /* Centraliza o contêiner na página */
     margin-left: -0px;
-    margin-top: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .borda2 {
@@ -48,8 +69,64 @@ span {
     margin-top: 2%;
 }
 
-.active {
-    border: 2px solid blue;
+.alinhar{
+    margin-top: 10%;
+    display: grid;
+    position: absolute;
 }
 
+.quantidade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 8%;
+ 
+}
 
+button {
+    width: 100%;
+}
+
+.site {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+}
+
+.total {
+    background-color: lightgrey;
+    max-width: 50%;
+    height: 30%;
+    min-height: 70%;
+    max-height: 100%;
+    margin-top: 2%;
+    border: 2px solid black;
+    text-align: center;
+    margin-left: -8.1%;
+}
+
+h1{
+    text-align: center;
+}
+
+table {
+    width: 100%; /* Garante que a tabela ocupe todo o espaço disponível */
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th {
+    text-align: center !important; /* Centraliza horizontalmente */
+    vertical-align: middle !important; /* Centraliza verticalmente */
+    display: table-cell; /* Garante que o elemento seja tratado como célula */
+    padding: 10px;
+    border: 1px solid black; /* Adiciona borda para verificar alinhamento */
+}
+
+td {
+    text-align: center !important; /* Centraliza horizontalmente */
+    vertical-align: middle !important; /* Centraliza verticalmente */
+    display: table-cell; /* Garante que o elemento seja tratado como célula */
+    padding: 10px;
+    border: 1px solid black; /* Adiciona borda para verificar alinhamento */
+}
