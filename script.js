@@ -2,42 +2,42 @@ var jogos = [
     {
     "photo": "Demons_Souls_capa.png",
     "name": "Demons souls",
-    "price": 9.99,
+    "price": "9.99",
     "activite": false,
     "quantity": 1
 },
 {
     "photo": "Dark_Souls_1_capa.png",
     "name": "Dark Souls",
-    "price": 100.00,
+    "price": "100.00",
     "activite": false,
     "quantity": 1
 },
 {
     "photo": "Dark_Souls_3_capa.png",
     "name": "Dark souls 3",
-    "price": 100.00,
+    "price": "100.00",
     "activite": false,
     "quantity": 1
 },
 {
     "photo": "Bloodborne_capa.png",
     "name": "Bloodborne",
-    "price": 50.00,
+    "price": "50.00",
     "activite": false,
     "quantity": 1
 },
 {
     "photo": "Sekiro_capa.jpg",
     "name": "Sekiro",
-    "price": 50.00,
+    "price": "50.00",
     "activite": false,
     "quantity": 1
 },
 {
     "photo": "Elden_Ring_capa.jpg",
     "name": "Elden Ring",
-    "price": 1000.00,
+    "price": "1000.00",
     "activite": false,
     "quantity": 1
 },
@@ -47,6 +47,19 @@ const SelecioneJogo = {
     data() {
         return {
             jogos: window.jogos
+        }
+    },
+    methods: {
+        total: function() {
+            var total = 0;
+            
+            this.jogos.forEach(function(item){
+                if (item.activite) {
+                    total += item.price * item.quantity;
+                }
+            });
+            
+            return total.toFixed(2);
         }
     }
 }
