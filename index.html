@@ -8,24 +8,56 @@
 </head>
 <body>
 <div id="app"> 
+    <div class="site">
+        
     <div class="borda2">
     <div class="caixa">
     <div v-for="jogo in jogos" :key="jogo.name"
     @click="jogo.activite = !jogo.activite"
-    :class="jogo.activite ? 'active' : ''"
+    :class="jogo.activite ? 'borda3' : 'borda'"
     >
-       
-        <div class="borda">
         <img :src="jogo.photo">
+        <div class="alinhar">
         <p>{{ jogo.name }}</p> 
-        <span class="price">Preço: US$ {{ jogo.price.toLocaleString('en', { minimumFractionDigits: 2 }) }}</span>
+        <span class="price">Preço: US$ {{ jogo.price}}</span>
+    
+       <div class="quantidade" v-if="jogo.activite">
+         <button @click.stop="jogo.quantity--" :disabled="jogo.quantity <=1">-</button>
         <span class="quantity">{{jogo.quantity}}</span>
-    </div>
+        <button @click.stop="jogo.quantity++">+</button>
+ </div>
+        
+    
+</div>
+</div>
+</div>
+</div>
+<div class="total" v-if="total()>0">
+    <h1>Detalhes</h1>
+    <table>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr v-for="jogo in jogos" :key="jogo.name">
+            <td v-if="jogo.activite">{{ jogo.quantity + 'x ' + jogo.name}}</td>
+            <td v-if="jogo.activite">{{ (jogo.quantity * jogo.price).toFixed(2) }}</td>
+        </tr>
+        <tr>
+      <td><strong>Total</strong></td>
+           <td><strong>{{ total() }}</strong></td>
+        </tr>
+    </tbody>
+</table>
 </div>
 </div>
 </div>
 </div>
 </div>
+
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="script.js"></script>
     
