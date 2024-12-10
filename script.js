@@ -43,10 +43,17 @@ var jogos = [
 },
 ];
 
+var comentario =  [];
+
 const SelecioneJogo = {
     data() {
         return {
-            jogos: window.jogos
+            jogos: window.jogos,
+            comentario: window.comentario,
+            novoComentario: {
+                nome: null,
+                comenta: null,
+            }
         }
     },
     methods: {
@@ -60,8 +67,19 @@ const SelecioneJogo = {
             });
             
             return total.toFixed(2);
-        }
+        },
+   adicionarComentario() {
+    if (this.novoComentario.nome && this.novoComentario.comenta) {
+        this.comentario.push({ ...this.novoComentario});
+            this.novoComentario.nome = null;
+            this.novoComentario.comenta = null;
+    } else {
+        alert("Os campos não foram preenchidos corretamente");
     }
-}
+   },
+},
+};
+
+
 
 Vue.createApp(SelecioneJogo).mount('#app');
