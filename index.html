@@ -54,6 +54,19 @@
 </table>
 </div>
 </div>
+<div class="comentario">
+    <h1>Deixe seu comentário</h1>
+    <label for="nome">Nome</label>
+    <input type="text" placeholder="Insira seu nome" name="nome" v-model="novoComentario.nome">
+    <label for="coment">Deixe seu comentário</label>
+    <input type="text" placeholder="Deixe seu comentário" name="coment" v-model="novoComentario.comenta">
+
+    <button @click="adicionarComentario">Enviar</button>
+
+    <!-- Exibição dos comentários -->
+    <div v-for="item in comentario" :key="item.nome" class="comentario-item">
+        <p><strong>{{ item.nome }}</strong>: {{ item.comenta }}</p>
+    </div>
 </div>
 </div>
 </div>
