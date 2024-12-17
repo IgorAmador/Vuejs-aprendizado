@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+    <div class="centro">
+        <div class="caixa">
+            <h1>Lista de tarefas</h1>
+            <label for="tarefa">Insira sua tarefa:</label>
+            <div class="lado">
+            <input v-model="novaTarefa.nome" placeholder="Insira tarefa" maxlength="45" @keyup.enter="adicionarTarefa">
+            <button @click="adicionarTarefa">ENVIAR</button>
+        </div>
+        <div class="novo-botao">
+            <button @click="deletarTarefa">Apagar Tarefas</button>
+        </div>
+        <div v-for="(tarefa, index) in tarefas" :key="index" class="tarefa-nome"
+        @click="tarefa.active = !tarefa.active" 
+        :class="tarefa.active ? 'riscado' : ''"> 
+            <div class="task"> 
+            
+            <p> {{ tarefa.nome }} </p>
+         </div>
+         <button @click.stop="apagarTarefa(index)">Excluir</button>
+   </div> 
+</div>
+
+    </div>
+    </div>
+</div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+.centro{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.caixa{
+    background-color: lightblue;
+    text-align: left;
+    border-radius: 30px;
+    width: 40%;
+    box-shadow: 10px 5px 5px gray;
+    min-height: 150px;
+    margin-top: 5%;
+    padding: 20px;
+    margin-bottom: 5%;
+    display: grid;
+}
+
+.caixa h1{
+    text-align: center;
+}
+
+.caixa label {
+    margin-left: 8%;
+    font-size: 25px;
+}
+
+.caixa input {
+    width: 60%;
+    margin-left: 8%;;
+    border-radius: 8px;
+    height: 32px;
+    margin-top: 2%;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+button {
+    padding: 1.5% 5%;
+    margin-left: 1.5%;
+    border-radius: 6px;
+    background-color: lightgreen;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover{
+    background-color: green;
+    transform: scale(1.1);
+}
+
+.lado {
+    display: grid (2);
+}
+
+.tarefa-nome {
+    display: grid;
+    grid-template-columns: auto 10%;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0
+}
+
+.task {
+    margin: 0;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.task p {
+    font-size: 20px;
+    padding-bottom: 2%;
+    margin: 0;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.tarefa-nome button {
+    background-color: red;
+    padding: 1.5% 5%;
+    height: 80%;
+}
+
+.tarefa-nome button:hover {
+    background-color: darkred;
+}
+
+.riscado p {
+    text-decoration: line-through;
+}
+
+.riscado .task {
+    background-color: lightgrey;
+    border: solid 1px;
+    cursor: pointer;
+}
+
+.novo-botao button {
+    background-color: red;
+    margin-top: 3%;
+    width: 93%;
+    margin-left: 4%;
+}
