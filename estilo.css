@@ -1,0 +1,181 @@
+
+
+p {
+    font-size: 25px;
+}
+
+span {
+    font-size: 18px;
+}
+
+.borda {
+    border: 1px solid black;
+    padding: 16px;
+    display: flex; /* Torna a caixa flexível */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    width: 150px; /* Define um tamanho fixo */
+    height: 250px; /* Define uma altura fixa */
+    text-align: center; /* Centraliza o texto */
+    margin: 0 auto; /* Centraliza a borda no grid */
+    margin-bottom: 10%;
+    min-width: 70%;
+    min-height: 90%;
+}
+
+
+
+.borda3 {
+    border: 3px solid blue;
+    padding: 16px;
+    display: flex; /* Torna a caixa flexível */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    width: 150px; /* Define um tamanho fixo */
+    height: 250px; /* Define uma altura fixa */
+    text-align: center; /* Centraliza o texto */
+    margin: 0 auto; /* Centraliza a borda no grid */
+    margin-bottom: 10%;
+    min-width: 70%;
+    min-height: 90%;
+}
+
+img {
+    width: 150px; /* Define uma largura fixa */
+    height: 170px; /* Define uma altura fixa */
+}
+
+
+
+.caixa{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 0px; /* Remove completamente o espaçamento entre as caixas */
+    row-gap: 3%;
+    justify-content: center; /* Centraliza o grid */
+    align-items: center; /* Alinha os itens verticalmente */
+    max-width: 650px; /* Limita a largura total do grid para aproximar os itens */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    margin-left: -0px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.borda2 {
+    border: 1px solid;
+    max-width: 670px;
+    margin-top: 2%;
+}
+
+.alinhar{
+    margin-top: 10%;
+    display: grid;
+    position: absolute;
+}
+
+.quantidade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 8%;
+ 
+}
+
+button {
+    width: 100%;
+}
+
+.site {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+}
+
+.total {
+    background-color: lightgrey;
+    max-width: 50%;
+    height: 30%;
+    min-height: 70%;
+    max-height: 100%;
+    margin-top: 2%;
+    border: 2px solid black;
+    text-align: center;
+    margin-left: -8.1%;
+}
+
+h1{
+    text-align: center;
+}
+
+table {
+    width: 100%; /* Garante que a tabela ocupe todo o espaço disponível */
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th {
+    text-align: center !important; /* Centraliza horizontalmente */
+    vertical-align: middle !important; /* Centraliza verticalmente */
+    display: table-cell; /* Garante que o elemento seja tratado como célula */
+    padding: 10px;
+    border: 1px solid black; /* Adiciona borda para verificar alinhamento */
+}
+
+td {
+    text-align: center !important; /* Centraliza horizontalmente */
+    vertical-align: middle !important; /* Centraliza verticalmente */
+    display: table-cell; /* Garante que o elemento seja tratado como célula */
+    padding: 10px;
+    border: 1px solid black; /* Adiciona borda para verificar alinhamento */
+}
+
+.comentario{
+    background-color: lightgrey;
+    text-align: center;
+    border-radius: 30px;
+    width: 40%;
+    box-shadow: 10px 5px 5px gray;
+    min-height: 150px;
+    margin-top: 5%;
+    padding: 20px;
+    margin-bottom: 5%;
+    display: grid;
+}
+
+.comentario h1 {
+    font-size: 25px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 90%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+label{
+    text-align: left;
+    margin-left: 3.2%;
+    margin-top: 2%;
+}
+
+.comentario button {
+    margin-top: 3%;
+    width: 89%;
+    margin-left: 2.7%;
+}
+
+.comentario p {
+    font-size: 20px;
+    max-width: 88%;
+    background-color: whitesmoke;
+    text-align: left;
+    margin-left: 3%;
+    border-radius: 7px;
+}

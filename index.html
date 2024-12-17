@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Jogos FromSoftware</title>
+</head>
+<body>
+<div id="app"> 
+    <div class="site">
+        
+    <div class="borda2">
+    <div class="caixa">
+    <div v-for="jogo in jogos" :key="jogo.name"
+    @click="jogo.activite = !jogo.activite"
+    :class="jogo.activite ? 'borda3' : 'borda'"
+    >
+        <img :src="jogo.photo">
+        <div class="alinhar">
+        <p>{{ jogo.name }}</p> 
+        <span class="price">Preço: US$ {{ jogo.price}}</span>
+    
+       <div class="quantidade" v-if="jogo.activite">
+         <button @click.stop="jogo.quantity--" :disabled="jogo.quantity <=1">-</button>
+        <span class="quantity">{{jogo.quantity}}</span>
+        <button @click.stop="jogo.quantity++">+</button>
+ </div>
+        
+    
+</div>
+</div>
+</div>
+</div>
+<div class="total" v-if="total()>0">
+    <h1>Detalhes</h1>
+    <table>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr v-for="jogo in jogos" :key="jogo.name">
+            <td v-if="jogo.activite">{{ jogo.quantity + 'x ' + jogo.name}}</td>
+            <td v-if="jogo.activite">{{ (jogo.quantity * jogo.price).toFixed(2) }}</td>
+        </tr>
+        <tr>
+      <td><strong>Total</strong></td>
+           <td><strong>{{ total() }}</strong></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<div class="comentario">
+    <h1>Deixe seu comentário</h1>
+    <label for="nome">Nome</label>
+    <input type="text" placeholder="Insira seu nome" name="nome" v-model="novoComentario.nome">
+    <label for="coment">Deixe seu comentário</label>
+    <input type="text" placeholder="Deixe seu comentário" name="coment" v-model="novoComentario.comenta">
+
+    <button @click="adicionarComentario">Enviar</button>
+
+    <!-- Exibição dos comentários -->
+    <div v-for="item in comentario" :key="item.nome" class="comentario-item">
+        <p><strong>{{ item.nome }}</strong>: {{ item.comenta }}</p>
+    </div>
+</div>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="script.js"></script>
+    
+</body>
+</html>
