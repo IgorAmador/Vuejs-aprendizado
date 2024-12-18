@@ -61,7 +61,6 @@ button:hover{
     grid-template-columns: auto 10%;
     align-items: center;
     gap: 10px;
-    padding: 10px;
     border-radius: 10px;
     margin: 10px 0
 }
@@ -82,13 +81,13 @@ button:hover{
 }
 
 .tarefa-nome button {
-    background-color: red;
+    background-color: rgb(255, 0, 0);
     padding: 1.5% 5%;
     height: 80%;
 }
 
 .tarefa-nome button:hover {
-    background-color: darkred;
+    background-color: rgb(226, 0, 0);
 }
 
 .riscado p {
@@ -106,4 +105,5 @@ button:hover{
     margin-top: 3%;
     width: 93%;
     margin-left: 4%;
+    margin-bottom: 3%;
 }
